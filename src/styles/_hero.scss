@@ -1,0 +1,39 @@
+@use 'variables' ;
+
+.hero {
+    text-align: center;
+    background-image: url('../images/background_poolparty.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .container {
+        position: relative;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        content: '';
+        opacity: 0.4;
+    }
+
+    &__text {
+        padding-top: 188px;
+
+        &--name {
+            color: variables.$corSecundaria;
+        }
+        
+    }
+    
+    @media (max-width: 640px) {
+        &__text {
+            padding: 70px 0;
+        }
+    }
+}

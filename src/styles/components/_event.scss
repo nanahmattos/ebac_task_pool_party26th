@@ -1,0 +1,40 @@
+@use '../variables';
+
+.event {
+    background: linear-gradient(180deg, rgba(12, 149, 181, 0.00) 0%, variables.$corSecundaria 100%);
+    height: 100%;
+
+    &__item{
+        position: relative;
+        margin-top:  113px;
+        padding-bottom: 156px;
+        padding: 83px 83px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        
+    }
+
+    &__image{
+        margin-top: 40px;
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+
+        &__item {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            padding: 40px;
+        }
+    }
+
+    @media (max-width: 1024px){
+
+        &__image {
+            width: 200px;
+        }
+    }
+}

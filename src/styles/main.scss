@@ -1,0 +1,64 @@
+@use 'hero';
+@use '../styles/components/infosParty';
+@use '../styles/components/buttons';
+@use '../styles/components/event';
+@use 'variables';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Paytone One', sans-serif;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1440px;
+    max-height: 1595px;
+    width: 100%;
+    margin: 0 auto;
+    
+
+    @media (max-width: 640px) {
+        max-width: 80%;
+    }
+
+    @media (max-width: 1024px){
+        max-width: 90%;
+    }
+}
+
+@mixin text ($fontSize : 42px) {
+    font-size: $fontSize;
+}
+.text--big {
+    @include text (72px);
+
+    @media (max-width: 640px) {
+        @include text (42px);
+    }
+}
+
+.text {
+    @include text (42px);
+    
+    @media (max-width: 640px) {
+        @include text (32px);
+    }
+
+    @media (max-width: 1024px) {
+        @include text (28px);
+    }
+}
+
+.text--small {
+    @include text (18px);
+
+    @media (max-width: 640px) {
+        @include text (14px);
+    }
+}
+

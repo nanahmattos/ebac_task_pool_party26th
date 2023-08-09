@@ -1,0 +1,21 @@
+@use '../variables';
+
+.button {
+    margin-top: 40px;
+    
+    &--primary{
+    background-color: variables.$corSecundaria;
+    padding: 27px 162px;
+    border-radius: 25px;
+    box-shadow: 0px 9px 30px 20px rgba(0, 0, 0, 0.30);
+    display: inline-block;
+    }
+    
+    @media (max-width:640px) {
+        &--primary {
+        white-space: nowrap;
+        width: 100%;
+        padding: 27px;
+        }
+    }
+}
